@@ -11,6 +11,8 @@
   - Investments
   - Dividends 
   - Credit cards
+  - List money moves
+  - update money moves
 
 - Manage accounts
   - Recurring money movement
