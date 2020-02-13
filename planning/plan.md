@@ -55,3 +55,14 @@
   - Market trends? 
   - Stock watchers? 
   - Web scraping for news on stocks? 
+  
+# Potential Infrastructure
+
+- Containerized
+  - Podman/Buildah for creating/managing container images and containers
+  - crio-o for container runtime
+- MVC
+  - Model: postgresql
+  - View: Angular (since most activity is on a single page at a time) maybe React when we add metrics? 
+    - Coupled with uikit for css framework
+  - Controller: django
