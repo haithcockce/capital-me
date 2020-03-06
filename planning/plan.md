@@ -66,3 +66,8 @@
   - View: Angular (since most activity is on a single page at a time) maybe React when we add metrics? 
     - Coupled with uikit for css framework
   - Controller: django
+
+
+# Implementation 
+
+- Build API first so we can just use it to 
