@@ -1,0 +1,14 @@
+# Postgres Variables
+
+POSTGRES_PASSWORD='capital-me'  # Change and salt?
+POSTGRES_USER='capital-me'
+POSTGRES_DB='capital-me'
+POSTGRES_HOST_AUTH_METHOD='trust'  # change for security later
+PGDATA='/var/lib/postgresql/data/pgdata'
+POSTGRES_PORT='5432'  # default port
+
+# Podman Variables
+
+CONTAINER_POSTGRES_NAME='postgres-backend'
+CONTAINER_POSTGRES_MOUNT='./postgres/data'
+CONTAINER_POSTGRES_PORT='5432'
