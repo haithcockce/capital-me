@@ -1,14 +1,31 @@
-# Postgres Variables
+# General Variables
 
-POSTGRES_PASSWORD='capital-me'  # Change and salt?
-POSTGRES_USER='capital-me'
-POSTGRES_DB='capital-me'
-POSTGRES_HOST_AUTH_METHOD='trust'  # change for security later
-PGDATA='/var/lib/postgresql/data/pgdata'
-POSTGRES_PORT='5432'  # default port
+CM_CAPITAL_ME_HOME="/home/capital-me/"
+
+
+# ---- Postgres Variables
+# Postgres Internal Variables
+CM_POSTGRES_PASSWORD="capital-me"  # Change and salt?
+CM_POSTGRES_USER="capital-me"
+CM_POSTGRES_DB="capital-me"
+CM_POSTGRES_HOST_AUTH_METHOD="trust"  # change for security later
+CM_PGDATA="/var/lib/postgresql/data"
+CM_POSTGRES_PORT="5432"  # default port
+
+# Postgres External Variables
+CM_CONTAINER_POSTGRES_NAME="capital-me/postgres"
+CM_CONTAINER_POSTGRES_VOLUME="$CM_CAPITAL_ME_HOME""postgres/data"
+CM_CONTAINER_POSTGRES_PORT="5432"
+
+# ---- Django Variables
+# Django Internal Variables
+CM_DJANGO_ROOT_DIR="/capital-me"
+
+# Django External Variables
+CM_CONTAINER_DJANGO_NAME="capital-me/django"
+CM_CONTAINER_DJANGO_VOLUME="$CM_CAPITAL_ME_HOME""django"
+CM_CONTAINER_DJANGO_TAG="captital-me-django"
+
 
 # Podman Variables
 
-CONTAINER_POSTGRES_NAME='postgres-backend'
-CONTAINER_POSTGRES_MOUNT='./postgres/data'
-CONTAINER_POSTGRES_PORT='5432'
