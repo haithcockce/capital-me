@@ -1,4 +1,6 @@
 FROM python:3
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
 RUN mkdir /capital-me
 WORKDIR /capital-me
 COPY requirements.txt /capital-me

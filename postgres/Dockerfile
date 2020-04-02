@@ -1,0 +1,6 @@
+FROM postgres
+
+ENV POSTGRES_USER="capital-me"
+ENV POSTGRES_PASSWORD="capital-me"
+ENV PGDATA="/pgsql-data"
+ENV POSTGRES_PORT=5432

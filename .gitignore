@@ -1,3 +1,8 @@
 postgres/data/*
 .cache*
 .local*
+.bash*
+.vim*
+.ssh
+.lesshst
+postgres/data

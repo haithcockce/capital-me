@@ -1,7 +1,7 @@
 # General Variables
 
-CM_CAPITAL_ME_HOME="/home/capital-me/"
-
+CM_PROJECT_HOME="/home/capital-me/"
+CM_ROOT_DIR="/capital-me"
 
 # ---- Postgres Variables
 # Postgres Internal Variables
@@ -9,22 +9,23 @@ CM_POSTGRES_PASSWORD="capital-me"  # Change and salt?
 CM_POSTGRES_USER="capital-me"
 CM_POSTGRES_DB="capital-me"
 CM_POSTGRES_HOST_AUTH_METHOD="trust"  # change for security later
-CM_PGDATA="/var/lib/postgresql/data"
+CM_PGDATA="$CM_ROOT_DIR"
 CM_POSTGRES_PORT="5432"  # default port
 
 # Postgres External Variables
-CM_CONTAINER_POSTGRES_NAME="capital-me/postgres"
-CM_CONTAINER_POSTGRES_VOLUME="$CM_CAPITAL_ME_HOME""postgres/data"
+CM_CONTAINER_POSTGRES_NAME="cm-postgres"
+CM_CONTAINER_POSTGRES_VOLUME="$CM_PROJECT_HOME""postgres/data"
 CM_CONTAINER_POSTGRES_PORT="5432"
+CM_CONTAINER_POSTGRES_TAG="$CM_CONTAINER_POSTGRES_NAME"
 
 # ---- Django Variables
 # Django Internal Variables
-CM_DJANGO_ROOT_DIR="/capital-me"
+CM_DJANGO_ROOT_DIR="$CM_ROOT_DIR"
 
 # Django External Variables
-CM_CONTAINER_DJANGO_NAME="capital-me/django"
-CM_CONTAINER_DJANGO_VOLUME="$CM_CAPITAL_ME_HOME""django"
-CM_CONTAINER_DJANGO_TAG="captital-me-django"
+CM_CONTAINER_DJANGO_NAME="cm-django-gunicorn"
+CM_CONTAINER_DJANGO_VOLUME="$CM_PROJECT_HOME""django-gunicorn"
+CM_CONTAINER_DJANGO_TAG="$CM_CONTAINER_DJANGO_NAME"
 
 
 # Podman Variables
