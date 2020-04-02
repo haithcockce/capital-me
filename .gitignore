@@ -5,4 +5,6 @@ postgres/data/*
 .vim*
 .ssh
 .lesshst
+.*
+!.gitignore
 postgres/data
