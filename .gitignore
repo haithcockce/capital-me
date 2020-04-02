@@ -1,10 +1,4 @@
 postgres/data/*
-.cache*
-.local*
-.bash*
-.vim*
-.ssh
-.lesshst
 .*
 !.gitignore
 postgres/data
