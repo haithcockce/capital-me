@@ -1,5 +1,6 @@
 postgres/data/*
+*env.dev
 .*
-!.gitignore
+!.gitconfig
 *.py[cod]
 __pycache__/

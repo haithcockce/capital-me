@@ -1,18 +1,20 @@
-clean all:
-	make clean pods
-	make clean images
-	sudo rm -rf db/data
-	mkdir db/data
+.PHONY: clean-all clean-pods clean-images clean-files
 
-clean pods:
+clean-all: clean-pods clean-images clean-files
+
+clean-pods:
 	podman pod rm -a -f
 
-clean images:
+clean-images:
 	podman rmi -a -f
 
+clean-files: 
+	sudo rm -rf backend/db.sqlite3
+	sudo rm -rf db/data
+	mkdir db/data
 
 build:
 	podman-compose -p cm build
 
 up: 
-	podman-compose -p cm up --build
+	podman-compose -p cm up -d --build

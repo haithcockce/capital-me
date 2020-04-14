@@ -1,8 +1,11 @@
-FROM python:3
+FROM python:3-slim
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
-RUN mkdir /backend
 WORKDIR /backend
 COPY . /backend
-RUN pip install -r requirements.txt
-
+RUN pip install -r requirements.txt \
+    && apt update \
+    && apt install netcat -y \
+    && apt clean \
+    && rm -rf /var/lib/apt/lists/*
+ENTRYPOINT ["/backend/app/entrypoint.sh"]
