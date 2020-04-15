@@ -2,14 +2,13 @@
 
 if [ "$DATABASE" = "postgres" ]
 then
-    echo "Waiting for postgres..." >> /backend/logging
+    echo "Waiting for postgres..."
 
     while ! nc -z $SQL_HOST $SQL_PORT; do
-      sleep 1
-      echo "still waiting..." >> /backend/logging
+      sleep 0.1
     done
 
-    echo "PostgreSQL started" >> /backend/logging
+    echo "PostgreSQL started"
 fi
 
 python manage.py flush --no-input
